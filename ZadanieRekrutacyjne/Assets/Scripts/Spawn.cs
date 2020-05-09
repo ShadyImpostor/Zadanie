@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public float najnizszytime=4;
-    public float najwyzszytime=10;
-    public float time =0;
+    public float najnizszytime = 4;
+    public float najwyzszytime = 10;
+    public float time = 0;
     public List<SpawnPoint> punkty;
     public int szansa = 1;
     public int maxRandom = 1000;
@@ -14,6 +14,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Spawner()
     {
+        Debug.Log("spawn");
         if (punkty != null)
             punkty[Random.Range(0, punkty.Count - 1)].GetComponent<SpawnPoint>().Spawn();
     }
@@ -25,14 +26,14 @@ public class Spawn : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > najnizszytime && Random.Range(0,maxRandom) < 5)
+        if (time > najnizszytime && Random.Range(0, maxRandom) < 5)
         {
-           // Spawner();
+            Spawner();
             time = 0;
         }
         if (time >= najwyzszytime)
         {
-            //Spawner();
+            Spawner();
             time = 0;
         }
     }

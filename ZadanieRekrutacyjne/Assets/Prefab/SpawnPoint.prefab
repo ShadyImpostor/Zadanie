@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1112998626536338504, guid: ae7d57fa9dd3e454486e2c8aa313c693, type: 3}
-  height: 20
+  height: 30

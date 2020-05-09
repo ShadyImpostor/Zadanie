@@ -9,17 +9,16 @@ public class SpawnPoint : MonoBehaviour
     private bool spawned = true;
     // Start is called before the first frame update
 
-        public void Spawn()
+    public void Spawn()
     {
-       GameObject o = GameObject.Instantiate(enemy);
-        //o.transform.position.Set(transform.position.x, height, transform.position.z);
+        GameObject o = GameObject.Instantiate(enemy);
+        o.transform.position.Set(transform.position.x, height, transform.position.z);
         o.SetActive(false);
-        //while (spawned)
-        //{
+        //while (spawned) {
         //    o.transform.position += new UnityEngine.Vector3(0, -0.1f, 0);
         //}
         o.SetActive(true);
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,12 +28,12 @@ public class SpawnPoint : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

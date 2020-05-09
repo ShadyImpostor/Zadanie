@@ -13,7 +13,7 @@ public class pistol : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        collision.gameObject.GetComponent<enemy>().hp -= damage;
+        collision.gameObject.GetComponent<enemy>().currenthp -= damage;
         Destroy(this.gameObject);
         Debug.Log("k");
     }
