@@ -8,15 +8,14 @@ public class Spawn : MonoBehaviour
     public float najwyzszytime = 10;
     public float time = 0;
     public List<SpawnPoint> punkty;
-    public int szansa = 1;
     public int maxRandom = 1000;
 
     // Start is called before the first frame update
     void Spawner()
     {
-        Debug.Log("spawn");
+        
         if (punkty != null)
-            punkty[Random.Range(0, punkty.Count - 1)].GetComponent<SpawnPoint>().Spawn();
+            punkty[Random.Range(0, punkty.Count)].GetComponent<SpawnPoint>().Spawn();
     }
     void Start()
     {
